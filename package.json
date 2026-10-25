@@ -1,0 +1,9 @@
+{
+  "name": "cyberfaceit-voice-server",
+  "version": "1.0.0",
+  "description": "Сервер сигналов для голосового чата CyberFaceit (WebRTC)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

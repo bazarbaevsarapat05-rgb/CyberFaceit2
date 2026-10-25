@@ -1,0 +1,13 @@
+services:
+  voice:
+    build: .
+    restart: always
+    ports: ["8080:8080"]
+    environment:
+      TURN_URLS: "turn:ВАШ_ДОМЕН:3478,turn:ВАШ_ДОМЕН:3478?transport=tcp"
+      TURN_SECRET: "СЕКРЕТ"
+  coturn:
+    image: coturn/coturn
+    restart: always
+    network_mode: host
+    volumes: ["./coturn/turnserver.conf:/etc/coturn/turnserver.conf:ro"]
